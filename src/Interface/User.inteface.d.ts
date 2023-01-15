@@ -19,6 +19,7 @@ export default interface UserInterface {
     PhoneNumbers: string
     followers: string[]
     following: string[]
+    token: string
 }
 
 export interface memberInterface extends UserInterface {

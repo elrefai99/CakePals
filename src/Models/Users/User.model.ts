@@ -44,6 +44,9 @@ export const UserSchema: Schema<UserInterface> = new Schema({
         type: [String],
         required: true,
     },
+    token:{
+        type: String,
+    },
 }, {
     timestamps: true,
 })
