@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express'
 import { UserModel } from '../../Models/Users/User.model'
 import { BakerModel } from '../../Models/Users/Baker'
 import { MemberModel } from '../../Models/Users/Member'
+import { WelcomNewUser } from '../../Functions/Email/Welcomenewuser'
 import * as bcrypt from 'bcryptjs'
 
 export const RegisterController = async (req: Request, res: Response, next: NextFunction) => {
@@ -32,6 +33,7 @@ export const RegisterController = async (req: Request, res: Response, next: Next
                 else if (data.type === 'baker') {
                     const user = await new BakerModel(data)
                     const newUser = await user.save()
+                    WelcomNewUser(req.body.email, req.body.username)
 
                     res.status(200).json({ status: 200, message: 'success', newUser })
                     next()
