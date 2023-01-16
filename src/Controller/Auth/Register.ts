@@ -27,12 +27,15 @@ export const RegisterController = async (req: Request, res: Response, next: Next
                     const user = await new MemberModel(data)
                     const newUser = await user.save()
 
+                    WelcomNewUser(req.body.email, req.body.username)
+
                     res.status(200).json({ status: 200, message: 'success', newUser })
                     next()
                 }
                 else if (data.type === 'baker') {
                     const user = await new BakerModel(data)
                     const newUser = await user.save()
+                    
                     WelcomNewUser(req.body.email, req.body.username)
 
                     res.status(200).json({ status: 200, message: 'success', newUser })

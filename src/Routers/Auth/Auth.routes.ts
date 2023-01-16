@@ -1,8 +1,8 @@
 import { Router } from 'express'
-import { RegisterController } from '../../Controller/Auth/index.auth'
+import { RegisterController, LoginController } from '../../Controller/Auth/index.auth'
 const router = Router()
 
 router.post('/register', RegisterController)
-router.post('/login')
+router.post('/login', LoginController)
 
 export default router
