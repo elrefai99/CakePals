@@ -14,6 +14,14 @@ export const AddressSchema: Schema<AddressInterface> = new Schema({
 })
 
 export const UserSchema: Schema<UserInterface> = new Schema({
+    fName: {
+        type: String,
+        required: true,
+    },
+    lName: {
+        type: String,
+        required: true,
+    },
     username: {
         type: String,
         required: true,

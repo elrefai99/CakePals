@@ -11,6 +11,8 @@ export interface RatingInterface {
 }
 
 export default interface UserInterface {
+    fName: string
+    lName: string
     username: string
     email: string
     password: string

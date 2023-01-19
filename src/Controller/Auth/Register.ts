@@ -17,6 +17,10 @@ export const RegisterController = async (req: Request, res: Response, next: Next
             const password = await bcrypt.hash(req.body.password, salt)
             data.password = password
 
+            // Create a Username
+            const username = req.body.fName + '_' + req.body.lName
+            data.username = username
+
             // get Email if used or not
             const getEmail = await UserModel.findOne({ email: req.body.email })
             if (getEmail) {
