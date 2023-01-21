@@ -7,7 +7,6 @@ CakePals is an app where people can sell home-baked cakes and pies to each other
 
 ## Technical used
 - NodeJS:
-  - Typescript
   - MongoDB
   - Express
 
