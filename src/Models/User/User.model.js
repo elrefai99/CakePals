@@ -51,14 +51,17 @@ const userSchema = new Schema({
     },
     Followers: {
         type: Array,
-        default: [string]
+        default: []
     },
     Followings: {
         type: Array,
-        default: [string]
+        default: []
+    },
+    token: {
+        type: String,
     }
 }, {
     timestamps: true,
 })
-
-export const UserModel = model('User', userSchema)
+const UserModel = model('User', userSchema)
+export default UserModel
