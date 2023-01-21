@@ -122,4 +122,4 @@ build
 dist
 bin
 .md
-upload
+uploads
