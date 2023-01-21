@@ -1,7 +1,0 @@
-{
-  "extends": "@mohamed-elrefai/tsconfigs",
-  "compilerOptions": {
-    "rootDir": "./",
-    "outDir": "dist"
-  }
-}
