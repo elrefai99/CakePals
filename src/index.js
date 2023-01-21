@@ -1,6 +1,13 @@
 import 'dotenv/config'
-import * as express from 'express';
+import express from 'express';
+import MongoDB from './utils/MongoDB.js';
+import Setup from './utils/Setup.js';
+import Hooks from './Hooks/Hooks.js';
 
 const app = express();
 
-app.listen(1999)
+Setup(app)
+
+Hooks(app)
+
+MongoDB(app)
