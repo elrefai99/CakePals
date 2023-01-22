@@ -9,10 +9,10 @@ export const WelcomeEmail = (email, username) => {
         from: process.env.Admin_Email,
         subject: 'Hello from Wedding.cs74',
         html: `
-                            <strong>
-                                Welocme to the app, ${username}. Let me know how you get along with the app.
-                            </strong>
-                        `,
+                <strong>
+                    Welocme to the app, ${username}. Let me know how you get along with the app.
+                </strong>
+            `,
     }
 
     sgMail
