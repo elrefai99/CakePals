@@ -2,7 +2,7 @@ import { RatingBakerModel } from '../../Models/Rating/RatingBaker.js'
 import UserModel from '../../Models/User/User.model.js'
 import { RatingModel } from '../../Models/Rating/Rating.model.js'
 
-export const AddRatingController = async (req, res, next) => {
+export const AddRatingOfBakerController = async (req, res, next) => {
     try {
         const data = req.body
         const getUser = await UserModel.findById(req.params.id)

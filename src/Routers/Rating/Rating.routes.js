@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { AddRatingController, UpdateRatingController } from '../../Controller/Rating/Rating.js'
+import { AddRatingOfBakerController, UpdateRatingController } from '../../Controller/Rating/Rating.js'
 import { verifyToken } from '../../Middleware/Auth.middleware.js'
 const router = Router();
 
-router.post('/addstar/:id', verifyToken, AddRatingController)
+router.post('/addstar/:id', verifyToken, AddRatingOfBakerController)
 router.put('/updatestar/:id', verifyToken, UpdateRatingController)
 
 
